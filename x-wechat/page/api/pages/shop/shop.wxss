@@ -1,0 +1,66 @@
+@import "../../../common/index.wxss";
+@import "../../../common/lib/weui.wxss";
+
+page 
+{
+  background-color: #ffffff;
+}
+.select_box{
+  background: #fff;
+  width: 60%;
+  margin: 30rpx auto;
+  position: relative;
+}
+.select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 70rpx;
+  border:1px solid #efefef;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.select_text{
+  font-size: 30rpx;
+  flex: 1;
+}
+.select_img{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  transition:transform 0.3s;
+}
+.select_img_rotate{
+  transform:rotate(180deg); 
+}
+.option_box{
+  position: absolute;
+  top: 70rpx;
+  width: 100%;
+  border:1px solid #efefef;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+  z-index: 9999;
+}
+.option{
+  display: block;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+}
+
+.icon-image-1{width:19px;height:24px;}
+.icon-image-2{width:30px;height:24px;}
+.icon-image-3{width:25px;height:25px;}
+
+button{margin:0rpx;display:unset;padding:0rpx;background-color:#ffffff;
+line-height:unset;border: unset;}
+button::after{ border: none; }
+.button-hover{ background-color: #ffffff;}
+.page-section-gap{ padding-bottom: 0px;}

@@ -1,0 +1,54 @@
+<view class="index">
+  <view class='height-6'></view>
+  <view class='select_box'>
+      <view class='select' catchtap='selectTap'>
+          <text class='select_text font-16'>{{shop_list[index].road}}</text>
+          <image class='select_img {{show&&"select_img_rotate"}}' src='/image/more_1.png' style='width:30rpx;height:16rpx;'></image>         
+      </view>
+      <view class='option_box' style='height:{{show?(shop_list.length>5?300:shop_list.length*60):0}}rpx; display:{{display}}'>
+          <view class=''>
+            <text class='option' style='{{index==shop_list.length-1&&"border:0;"}}' wx:for='{{shop_list}}' wx:key='this' data-index='{{index}}' data-id='{{item.id}}' catchtap='optionTap'>{{item.road}}</text>
+          </view>  
+      </view>
+  </view>
+  <image bindtap="imageBrowseBtn" data-src='{{host}}{{detail.url}}' src='{{host}}{{detail.url}}' style='width:100%;height:180px;'></image>
+
+  <view class="page-section-gap">
+    <view class='font-18 height-60'>{{detail.name}}（{{detail.road}}）</view>
+  </view>
+  <view class='border-2'></view>
+ 
+  <view class='page-section-gap padding-top-8'>
+       <view class='left height-55' style='width:5% 70rpx; height:95rpx;'>
+          <image class="kind-list-img icon-image-1" src="/image/address.png" bindtap='showShopAddress' data-latitude="{{detail.latitude}}" data-longitude="{{detail.longitude}}" data-address="{{detail.address}}"></image>
+       </view>
+       <view class='font-14 right' style='width:91%;'>
+          <view class='left height-40 font-14' bindtap='showShopAddress' data-latitude="{{detail.latitude}}" data-longitude="{{detail.longitude}}" data-address="{{detail.address}}">
+          {{detail.address}}</view> 
+          
+            <view class='right padding-top-10' style='width:80px;'>
+              <button open-type='contact' session-from="weapp" class='width-50'>
+                <image class="kind-list-img icon-image-2" src="/image/wechat.png"></image></button>
+             
+              <text decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;</text>
+               <button bindtap='callPhone' class='width-50' data-phone='{{detail.phone}}'>
+                <image class="kind-list-img icon-image-3" src="/image/phone.png" ></image>
+              </button>
+          </view>
+       </view>  
+  </view>
+
+  <view class='border-2'></view> 
+  <view class='height-24'></view>
+
+  <view class="page-section-gap">
+    <text class='font-14 height-50'>门店介绍</text>
+    <text class='font-13 color-333'>
+      {{detail.introduce}}
+    </text> 
+    <view class='height-24-1'></view>
+    <text class='font-12 color-999'>{{detail.company}}</text>   
+  </view>      
+</view>
+
+   

@@ -1,0 +1,15 @@
+@import "../../../common/index.wxss";
+@import "../../../common/lib/weui.wxss";
+
+.header{height: 270rpx; width: 100%; text-align: center;}
+
+.index-right{ width: 160rpx;height: 72rpx;}
+.color-1{color: #7E82F6;}
+.view-width{ width: 80%; margin:0rpx auto; padding:0rpx; text-align: center;}
+
+button{margin:0rpx;display:unset;padding:0rpx;background-color:#F2F2F2;line-height:unset; border:0px; color:unset;}
+button::after{ border: none; }
+.button-hover{ background-color: #F2F2F2; color: unset;}
+.bottom-0{ position:fixed; bottom:80rpx; width:100%;}
+
+.userinfo{ display:inline-flex;}

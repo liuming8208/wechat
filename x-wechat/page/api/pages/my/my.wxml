@@ -1,0 +1,43 @@
+
+<view class='image-width' style='display:table'>
+   <image src='/image/my_head.png' class='image-width' ></image>
+   <view class='center heard_view'>
+      <view class='height-6'></view>
+      <view class='margin-padding-0'>
+        <open-data type="userAvatarUrl" class="userinfo"></open-data>
+      </view>
+      <view class='height-6'></view>
+      <view class='color-fff font-16' >
+        <open-data type="userNickName"></open-data>
+      </view>
+      <view class='height-12'></view>
+   </view>
+  
+</view>
+
+ <view class='height-30'></view>
+  <view class='kind-list'>
+    <view class='padding-20' bindtap='myCodeBtn'>
+        <view class='height-6'></view>
+        <image class="kind-list-img index-left" src="/image/card.png" style='width:25px;height:19px; padding-top:4rpx;'></image>
+        <view class='font-32-left font-14 color-666'>我的优惠券</view> 
+        <image class="kind-list-img index-right" src="/image/to.png" style='width:9px;height:16px; padding-top:4rpx;'></image>
+        <view class='height-6 clear-both'></view>
+    </view>
+    <view class='border-2'></view> 
+    <view class='padding-20' bindtap='quitBtn'>
+        <view class='height-6'></view>
+        <image class="kind-list-img index-left" src="/image/out.png" style='width:24px;height:24px; padding-top:4rpx;'></image>
+        <view class='font-32-left font-14 color-666' >退出账号</view> 
+    </view>
+    <view class='height-6 clear-both'></view>
+ </view>   
+ 
+  <view class='bottom-0'>
+    <view class='view-width'>
+       <text class='font-13' bindtap='questionBtn'>常见问题</text>
+       <text class='font-13' decode='true'>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</text>
+       <button open-type='contact' session-from="weapp" class='font-13'>联系客服</button>
+    </view>
+  </view>
+

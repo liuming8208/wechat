@@ -1,0 +1,53 @@
+{
+  "pages": [
+    
+    "page/component/index",
+    "page/api/pages/luck/luck",
+    "page/api/pages/zan/zan",
+    "page/api/pages/my/my",
+    "page/api/pages/mycode/mycode",
+    "page/api/pages/shop/shop",
+    "page/api/pages/question/question"
+  ],
+
+  "window": {
+    "enablePullDownRefresh":true,
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "丞心护肤造型",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#7E82F6",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "page/component/index",
+        "iconPath": "image/home_space.png",
+        "selectedIconPath": "image/home.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "page/api/pages/shop/shop",
+        "iconPath": "image/mail_space.png",
+        "selectedIconPath": "image/mail.png",
+        "text": "商铺"
+      },
+      {
+        "pagePath": "page/api/pages/my/my",
+        "iconPath": "image/my_space.png",
+        "selectedIconPath": "image/my.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

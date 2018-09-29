@@ -1,0 +1,27 @@
+@import "../../../common/index.wxss";
+@import "../../../common/lib/weui.wxss";
+
+page{
+  background-color: #F2F2F2;
+}
+
+.border-top-buttom-1{ border-top:1rpx #dddddd solid;border-bottom:1rpx #dddddd solid;}
+.border-left-1{ border-left: 1rpx #dddddd solid;}
+
+.view-left{ width:49%; float: left}
+.view-right{ width: 49%; float: right}
+
+.kind-list{ margin: 10rpx auto;}
+.view-left-1{ width:65%; float: left; border-right: 1rpx #E2E2FE dashed;}
+.view-right-1{ float: right; }
+.index-right{ width: 160rpx;height: 72rpx;}
+
+.share-image{ width:420rpx; height: 430rpx; }
+
+button{ background-color:#F2F2F2;display:unset;}
+button::after{ border: none}
+.button-hover{ background-color:#F2F2F2;}
+
+.mycode_isnull{ width: 100%; top:30%}
+.mycode_contact{bottom: 150rpx; width: 100%;}
+

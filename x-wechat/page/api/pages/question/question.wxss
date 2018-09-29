@@ -1,0 +1,17 @@
+@import "../../../common/index.wxss";
+@import "../../../common/lib/weui.wxss";
+
+.kind-list-item {
+  margin: 20rpx 0;
+  background-color: #FFFFFF;
+  border-radius: 4rpx;
+  overflow: hidden;
+}
+
+button{ background-color:#F2F2F2;position:unset;}
+button::after{ border: none}
+.button-hover{ background-color:#F2F2F2;}
+
+.kf_button{ bottom: 120rpx;position: fixed; width: 100%;}
+.kf_button::after{border: 0px;}
+

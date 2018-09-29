@@ -1,0 +1,51 @@
+<view class="index">    
+  <view class='view-height border-top-buttom-1 height-45 background-color-fff'>
+    <view class='view-left center font-16 {{border_left?"border-bottom_l":""}}' bindtap='unexchange'>未兑换</view>
+    <view class='view-right center font-16 border-left-1 {{border_right?"":"border-bottom_l"}}' bindtap='exchange'>已兑换</view>
+  </view>
+
+  <view class='height-12'></view>
+  <view wx:if="{{!isNull}}">
+    <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+    <view class='kind-list clear-both' style='height:{{item.status==1?160:120}}rpx'>
+        <view class='view-left-1'>
+            <view class='font-16 height-35'>{{item.task_name}}</view>
+            <view class='font-16 height-25'>奖励：{{item.reward_name}}</view>
+            <view wx:if="{{item.status==1}}">
+               <view class='font-12 height-25 red-1'>优惠券将于{{item.code_expire}}过期</view>
+            </view>
+        </view>
+         <view wx:if="{{item.status==1}}">
+            <view class='view-right-1' style='height:220rpx;line-height:220rpx'>
+               <image src='/image/share_1.png' style='width:222rpx;height:80rpx' bindtap="shareCodeBtn" data-codeurl='{{item.code_url}}'></image>
+            </view>  
+         </view>
+         <view wx:elif="{{item.status==2}}">
+            <view class='view-right-1 font-24 padding-right-18' style='height:120rpx;line-height:120rpx'>已兑换</view>
+         </view>
+      </view>
+  </block>
+  </view>
+  <view wx:else>
+   <view class='clear-both center mycode_isnull'>
+    <image src='/image/not_found_code.png' style='width:227px;height:170px'></image>
+    </view>
+  </view>
+  
+    
+ <modal title="兑换的二维码" hidden="{{modalHidden}}" bindconfirm="shareCodeConfirm" no-cancel="true" confirm-text="关闭"> 
+   <view class='center'>
+        <image class="share-image" src="{{host}}/{{code_url}}" mode='aspectFill'>
+        </image> 
+      </view>
+      <view class='height-6'></view>
+      <view class='view-image font-12'>本优惠券仅适用于线下门店消费适用，到店请出示给店员核销        </view>  
+ </modal>
+
+  <view class='center mycode_contact'>
+    <button open-type="contact" session-from="weapp">
+      <image src='/image/call_s.png' style='width:626rpx; height:140rpx'></image>
+    </button>
+  </view>
+  
+</view>  

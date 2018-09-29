@@ -1,0 +1,96 @@
+<view class="index {{modalHidden?'hiddenScroll':''}} {{luckHidden?'hiddenScroll':''}}">
+
+    <view class="page-section page-section-spacing">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{banner}}" wx:key="*this">
+          <swiper-item class="swiper-item">
+            <image bindtap="imageBrowseBtn" data-src='{{host}}{{item.url}}' src='{{host}}{{item.url}}' style='width:100%;height:210px;' ></image> 
+          </swiper-item>
+        </block>
+      </swiper>
+
+      <view class="page-section-title task_left">热门任务</view>
+      <view class="page-section-title task_right text-right">
+        <navigator url="../api/pages/mycode/mycode" >已完成任务 
+        <view class='task_right' style='line-height:130rpx;width:40rpx;'><image src='/image/more.png' style='height:16px;width:16px'></image>
+        </view>
+        </navigator>  
+      </view>
+
+      <block wx:for-items="{{taskOrder}}" wx:key="{{item.task_id}}">
+      <view class="kind-list clear-both">
+        <view class="kind-list-item">
+          <view id="{{item.task_id}}" class="kind-list-item-hd">
+            <view class='index-view1'>
+              <image class="kind-list-img index-left" src="/image/gift.png"></image>
+            </view>
+            <view class='index-view2'>
+               <view class="kind-list-text font-size-14 height-25">{{item.task_name}}</view>
+               <view class="kind-list-text font-size-14 height-25 gray">
+               完成：{{item.click_number}}/{{item.count}}</view>
+               <view class="kind-list-text font-size-14 height-25">奖励：{{item.reward_name}}</view>
+            </view>
+            <view class='index-view3 index-right'>
+              <image class='kind-list-img' style='width:80px;height:36px' src="/image/{{item.order_id?'share':'get'}}.png" data-id='{{item.task_id}}' data-name='{{item.task_name}}' data-types="{{item.order_id?'1':'0'}}"
+              data-orderId="{{item.order_id}}" bindtap="shareBtn" ></image>
+              </view>
+          </view>
+        </view>
+       </view>
+       <view class='height-6'></view>
+      </block>
+  
+    <view class='mask' wx:if='{{modalHidden}}'>
+      <view class='modal-content center'>
+        <slot>
+          <view class='margin-padding-0' style='width:70%;'>
+            <text class='font-22 color-fff' decode='true'>分享享优惠</text>
+            <view class='right padding-top-8' style='width:44rpx;'>
+            <image src='/image/close.png' style='width:44rpx; height:44rpx;' bindtap="shareCancel"></image></view>
+          </view>
+            <view class='height-12'></view>
+          <view>
+            <image src='/image/ima.jpg' style='width:90%;'></image>
+          </view>
+          <view class='font-14 color-fff'>分享给好友，好友点赞即可获得奖品</view>
+        </slot>
+        <view class='height-30'></view>
+        <view style='width:80%;' class='margin-padding-0'>
+          <view class='color-fff left' style='width:50%;'>
+            <button bindtap='saveFriendImageBtn' data-taskId='{{taskId}}'>
+              <image src='/image/download.png' style='width:52rpx;height:50rpx'></image>
+              <view class='font-14'>保存图片</view>
+            </button>
+          </view>
+          <view class='font-15 color-fff right' style='width:48%;'>
+            <button open-type="share" data-taskId='{{taskId}}' data-taskName='{{taskName}}'>
+              <image src='/image/share_icon.png' style='width:26px;height:26px'></image>
+              <view class='font-14'>分享</view>
+            </button>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='mask' wx:if='{{luckHidden}}'>
+      <view class='modal-content-1 center'>
+        <slot>
+          <view>
+             <view>
+              <image src='/image/gift_bg.png' style='width:248px;height:218px;'></image>
+              <image src='/image/close.png' style='width:22px;height:22px;position:absolute;padding-top:35px;' bindtap='closeLuckBtn'></image>
+             </view>
+             
+             <view class='height-12'></view>
+             <view class='font-16 color-fff'>恭喜您</view>
+             <view class='font-16 color-fff'>获得一次抽奖机会</view>
+             <view class='height-12'></view>
+             <image bindtap='navigatorBtn' src='/image/but_go.png' style='width:226px;height:69px;'></image>
+          </view>
+        </slot>
+      </view>
+</view>
+
+ </view>    
+</view>
+  

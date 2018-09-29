@@ -1,0 +1,35 @@
+
+<modal title="恭喜您获得"  hidden="{{hiddenModal}}"  confirm-text="确定" no-cancel="true"  
+  bindconfirm="listenerConfirm" > {{detail}} </modal>  
+<!--modal弹出框 -->
+
+<view class='height-12'></view>
+<view class='zhuanpan'>
+  <image src='/image/zhuanpan/ly-plate-c.gif' class='bg'></image>
+  <image src='/image/zhuanpan/bg-lottery.png' class='innerbg'  animation="{{animationData}}"></image>
+  <image src='/image/zhuanpan/playbtn.png' class='btn' bindtap="start"></image>
+</view>
+
+<view class='height-12'></view>
+<view class='margin-padding-0 center'>
+
+  <button open-type='getUserInfo' wx:if="{{isNotGetUserInfo}}" bindgetuserinfo='getUserInfoBtn'>
+    <image src='/image/login_luck.png' style='width:223px;height:70px;'></image>
+  </button>
+</view>
+
+<view class='margin-padding-0 center'>
+   <image src='/image/tit_bg.png' style='width:100%;height:91px'></image>
+   <view class='kind-list clear-both' style='height:280rpx'>
+     <view class='view-left-1 left font-16'>用户名</view>
+     <view class='view-right-1 right font-16'>获得奖品</view>
+      <block wx:for-items="{{list}}" wx:key="">
+         <view class='clear-both height-24'>
+           <view class='view-left-1 left'>{{item.nick_name}}</view>
+           <view class='view-right-1 right'>{{item.task_name}}</view>
+         </view>
+    </block>
+
+   </view>
+    
+</view>

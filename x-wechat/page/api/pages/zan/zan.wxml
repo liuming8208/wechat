@@ -1,0 +1,36 @@
+<view class="index">
+
+  <view class='height-12'></view>  
+  <view class="page-section page-section-gap">
+   <view class='height-12'></view>
+   <view class="header">
+      <image class='userinfo' src='{{avatar_url}}'></image>
+      <view class='font-16 color-333'>{{nick_name}}</view>
+   </view>
+    <view class='height-12'></view>
+  </view>
+
+  <view class='kind-list center padding-top-buttom-40'>
+      <image src='/image/call.png' style='width:136rpx;height:182rpx;'></image>
+      <view class='height-12'></view>
+      <view class='font-20 color-1 height-35'>为小伙伴打call</view>
+      <view class='font-16 color-666 height-35'>小伙伴已收到
+      <text class='red'>{{click_number}}</text>个赞</view>
+      <view class='font-16 color-666 height-35'>还差
+      <text class='red'>{{count-click_number}}</text>个赞即可获得奖品</view>
+      <view class='height-25'></view>
+      <view class='view-right-1' bindtap='clickBtn' data-userid='{{user_id}}' data-taskid='{{task_id}}'>
+        <image src='/image/but_3.png' style='width:418rpx;height:138rpx' ></image>
+      </view>
+  </view>
+
+    <view class='bottom-0'>
+    <view class='view-width'>
+       <text class='font-13' bindtap='questionBtn'>常见问题</text>
+       <text class='font-13' decode='true'>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</text>
+       <button open-type='contact' session-from="weapp" class='font-13'>联系客服</button>
+    </view>
+  </view>
+
+
+</view>  
