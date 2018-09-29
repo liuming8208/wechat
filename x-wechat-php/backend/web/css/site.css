@@ -1,0 +1,18 @@
+﻿
+body { font-family: "Microsoft Yahei";}
+#dvButtons{ padding-left: 110px; }
+#dvButtonsEx{ padding-left: 110px; }
+#dvButtonsEx2{ padding-left: 26px; }
+input, textarea, select{ font-family: "Microsoft Yahei"; }
+
+.form-horizontal .width-130{ width: 130px;}
+.form-horizontal .width-130 label{width: 130px;}
+
+.field-gameinfo-image_path .span8{ width: 500px;}
+.field-gameinfo-image_path div .controls{display:block;}
+
+input[readonly],.form-control[readonly]{background-color: #fcfbf7;}
+
+.padding-12{ padding: 12px;}
+
+.color-999{ color: #999999}

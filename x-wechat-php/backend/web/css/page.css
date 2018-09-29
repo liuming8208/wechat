@@ -1,0 +1,42 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  /* Make inputs at least the height of their button counterpart */
+
+  /* Makes inputs behave like true block-level elements */
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e0eaf7;
+}
+.container {
+  margin-left: 0px;
+  margin-top: 0px;
+  width: auto;
+  padding: 10px 0px 0px 10px;
+}
+hr {
+  border-top: 1px solid #c6d8ec;
+  border-bottom: 1px solid #ffffff;
+}
